@@ -5,51 +5,49 @@ public class Triangulo extends Ponto2D {
     private int base;
     private int altura;
 
-    public Triangulo(int x, int y) {
-        super(x, y);
-        this.vertice1 = new Ponto2D(x, y);
-        this.vertice2 = new Ponto2D(x, y);
-        this.vertice3 = new Ponto2D(x, y);
+    public Triangulo(Ponto2D vertice1, Ponto2D vertice2, Ponto2D vertice3) {
+        super(vertice1, vertice2, vertice3);
+        this.vertice1 = vertice1;
+        this.vertice2 = vertice2;
+        this.vertice3 = vertice3;
     }
 
-    public void setVertice1(int x, int y){
-        this.setX(x);
-        this.setY(y);
+    public Ponto2D getVertice1() {
+        return this.vertice1;
     }
 
-    public void setVertice2(int x, int y){
-        this.setX(x);
-        this.setY(y);
+    public Ponto2D getVertice2() {
+        return this.vertice2;
     }
 
-    public void setVertice3(int x, int y){
-        this.setX(x);
-        this.setY(y);
+    public Ponto2D getVertice3() {
+        return this.vertice3;
     }
 
-    public void getVertice(Ponto2D verticeX){
-        verticeX.getXY();
+    public void getVertices(){
+        System.out.println("Vertice 1: (" + vertice1.getX() + ", " + vertice1.getY() + ")");
+        System.out.println("Vertice 2: (" + vertice2.getX() + ", " + vertice2.getY() + ")");
+        System.out.println("Vertice 3: (" + vertice3.getX() + ", " + vertice3.getY() + ")");
     }
 
-    public void setBase(int base){
+    public void setBase(int base) {
         this.base = base;
     }
 
-    public void setAltura(int altura){
+    public void setAltura(int altura) {
         this.altura = altura;
     }
 
-    public int getBase(int base) {
+    public int getBase() {
         return base;
     }
 
-    public int getAltura(int altura){
+    public int getAltura() {
         return altura;
     }
 
-    public void area(int base, int altura){
+    public void calcularArea() {
         float area = (float) (base * altura) / 2;
-        System.out.println("Area: " + area);
+        System.out.println("Área: " + area);
     }
-
 }

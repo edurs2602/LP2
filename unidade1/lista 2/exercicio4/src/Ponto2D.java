@@ -9,6 +9,10 @@ public class Ponto2D {
 
     public Ponto2D() {}
 
+    public Ponto2D(Ponto2D vertice1, Ponto2D vertice2, Ponto2D vertice3) {
+
+    }
+
     public void setX(int x){
         this.x = x;
     }
